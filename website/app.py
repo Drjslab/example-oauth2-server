@@ -9,8 +9,8 @@ def create_app(config=None):
     app = Flask(__name__)
     #For SSL Startup
     context=ssl.SSLContext(ssl.PROTOCOL_TLSv1_2)
-	context.load_verify_locations("ca_bundle.crt")	
-	context.load_cert_chain('certificate.crt', 'private.key')
+    context.load_verify_locations("ca_bundle.crt")	
+    context.load_cert_chain('certificate.crt', 'private.key')
 
     # load default configuration
     app.config.from_object('website.settings')
